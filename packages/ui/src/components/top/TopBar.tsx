@@ -17,7 +17,7 @@ const Bar = styled.header`
   background-color: ${Colors.White};
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
 `
