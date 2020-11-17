@@ -1,0 +1,61 @@
+{
+  "name": "@boilerplate/ui",
+  "description": "Interface",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=10",
+    "yarn": "^1.17.3"
+  },
+  "scripts": {
+    "lint": "yarn lint:prettier --check && yarn lint:eslint",
+    "lint:fix": "yarn lint:prettier --write && yarn lint:eslint --fix",
+    "lint:eslint": "eslint './{src,test}/**/*.{ts,tsx}'",
+    "lint:prettier": "yarn prettier './{src,test}/**/*.{ts,tsx,html}'",
+    "clean": "rimraf ./build/",
+    "test": "mocha",
+    "start": "webpack serve --mode development --progress",
+    "build": "webpack --mode production --progress"
+  },
+  "dependencies": {
+    "@metamask/jazzicon": "^2.0.0",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.4",
+    "ethers": "^5.0.19",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.3",
+    "@web3-react/core": "^6.1.1",
+    "@web3-react/injected-connector": "^6.0.7",
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "ethereum-waffle": "^3.2.0",
+    "ethers": "^5.0.19",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^8.2.1",
+    "mock-local-storage": "^1.1.15",
+    "prettier": "^2.1.2",
+    "react-test-renderer": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "solc": "^0.7.4",
+    "ts-loader": "^8.0.7",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "github": {
+    "silent": true
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

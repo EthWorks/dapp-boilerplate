@@ -1,0 +1,10 @@
+{
+  "compilerVersion": "0.7.0",
+  "outputType": "minimal",
+  "compilerOptions": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  }
+}
