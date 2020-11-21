@@ -1,5 +1,5 @@
 {
-  "name": "manifold",
+  "name": "monorepo",
   "private": true,
   "engines": {
     "node": ">=10",
