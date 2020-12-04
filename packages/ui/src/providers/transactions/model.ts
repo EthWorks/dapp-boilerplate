@@ -20,9 +20,11 @@ export interface StoredTransaction {
 export interface StoredTransactions {
   [ChainId.Mainnet]: StoredTransaction[]
   [ChainId.Kovan]: StoredTransaction[]
+  [ChainId.Ganache]: StoredTransaction[]
 }
 
 export const DEFAULT_STORED_TRANSACTIONS: StoredTransactions = {
   [ChainId.Mainnet]: [],
   [ChainId.Kovan]: [],
+  [ChainId.Ganache]: []
 }
