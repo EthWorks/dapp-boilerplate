@@ -6,7 +6,7 @@ import { useBlockNumber, useChainState } from '../../providers'
 export function BlockNumber() {
   const blockNumber = useBlockNumber()
   const chainState = useChainState()
-  const fetchedBlockNumber = chainState?.blockNumber
+  const fetchedBlockNumber = chainState?.value?.blockNumber
 
   const isDifferent = fetchedBlockNumber !== blockNumber
   const toDisplay = blockNumber || fetchedBlockNumber || 0

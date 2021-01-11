@@ -12,5 +12,5 @@ export const GanacheEther = new Currency(ChainId.Ganache, 'Ganache Ether', 'GETH
 export const NATIVE_CURRENCY = {
   [ChainId.Mainnet]: Ether,
   [ChainId.Kovan]: KovanEther,
-  [ChainId.Ganache]: GanacheEther
+  [ChainId.Ganache]: GanacheEther,
 }
