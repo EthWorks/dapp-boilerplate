@@ -1,5 +1,5 @@
 import { ChainId, MULTICALL_ABI, MULTICALL_ADDRESS, NATIVE_CURRENCY } from '../constants'
-import { useChainCall, useChainCallIf } from './useChainCalls'
+import { useChainCallIf } from './useChainCalls'
 import { Interface } from '@ethersproject/abi'
 import { BigNumber } from '@ethersproject/bignumber'
 import { useEthers } from './useEthers'

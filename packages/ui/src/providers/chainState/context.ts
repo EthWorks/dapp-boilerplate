@@ -11,8 +11,12 @@ export const ChainStateContext = createContext<{
   addCalls(calls: ChainCall[]): void
   removeCalls(calls: ChainCall[]): void
 }>({
-  addCalls: () => {},
-  removeCalls: () => {},
+  addCalls: () => {
+    // empty
+  },
+  removeCalls: () => {
+    // empty
+  },
 })
 
 export function useChainState() {
