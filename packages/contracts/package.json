@@ -17,7 +17,8 @@
     "build": "yarn build:contracts && yarn build:typechain",
     "build:contracts": "waffle .waffle.json",
     "build:typechain": "typechain --target ethers-v5 --outDir build/types 'build/*.json'",
-    "test": "mocha"
+    "test": "mocha",
+    "start": "ts-node local"
   },
   "devDependencies": {
     "@typechain/ethers-v5": "^4.0.0",

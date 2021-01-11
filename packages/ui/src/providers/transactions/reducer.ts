@@ -32,7 +32,7 @@ export function transactionReducer(state: StoredTransactions, action: Action): S
     case 'TRANSACTION_ADDED':
       return {
         ...state,
-        [action.chainId]: state[action.chainId].concat({
+        [action.chainId]: (state[action.chainId] ?? []).concat({
           hash: action.hash,
           description: action.description,
           from: action.from,
@@ -42,7 +42,7 @@ export function transactionReducer(state: StoredTransactions, action: Action): S
     case 'TRANSACTION_CHECKED':
       return {
         ...state,
-        [action.chainId]: state[action.chainId].map((tx) => {
+        [action.chainId]: (state[action.chainId] ?? []).map((tx) => {
           if (tx.hash === action.hash) {
             return { ...tx, lastCheckedBlockNumber: action.blockNumber }
           } else {
@@ -53,7 +53,7 @@ export function transactionReducer(state: StoredTransactions, action: Action): S
     case 'TRANSACTION_MINED':
       return {
         ...state,
-        [action.chainId]: state[action.chainId].map((tx) => {
+        [action.chainId]: (state[action.chainId] ?? []).map((tx) => {
           if (tx.hash === action.hash) {
             return { ...tx, receipt: action.receipt }
           } else {

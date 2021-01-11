@@ -17,12 +17,8 @@ export interface StoredTransaction {
   receipt?: TransactionReceipt
 }
 
-export interface StoredTransactions {
-  [ChainId.Mainnet]: StoredTransaction[]
-  [ChainId.Kovan]: StoredTransaction[]
+export type StoredTransactions = {
+  [T in ChainId]?: StoredTransaction[]
 }
 
-export const DEFAULT_STORED_TRANSACTIONS: StoredTransactions = {
-  [ChainId.Mainnet]: [],
-  [ChainId.Kovan]: [],
-}
+export const DEFAULT_STORED_TRANSACTIONS: StoredTransactions = {}

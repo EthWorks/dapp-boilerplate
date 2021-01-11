@@ -35,8 +35,7 @@ export function TransactionProvider({ children }: Props) {
 
   useEffect(() => {
     if (!chainId || !library || !blockNumber) return
-
-    transactions[chainId]
+    ;(transactions[chainId] ?? [])
       .filter((tx) => shouldCheck(blockNumber, tx))
       .forEach((tx) => {
         library
