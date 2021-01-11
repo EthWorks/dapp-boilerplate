@@ -15,17 +15,7 @@ export function useChainCalls(calls: ChainCall[]) {
   })
 }
 
-export function useChainCall<T>(call: ChainCall & { transform: (value: string) => T }) {
-  const [result] = useChainCalls([call])
-  if (result !== undefined) {
-    return call.transform(result)
-  }
-}
-
-export function useChainCallIf<T>(condition: boolean, getCall: () => ChainCall & { transform: (value: string) => T }) {
-  const call = condition ? getCall() : undefined
-  const [result] = useChainCalls(call ? [{ address: call.address, data: call.data }] : [])
-  if (result !== undefined) {
-    return call?.transform(result)
-  }
+export function useChainCall(call: ChainCall | false | undefined) {
+  const [result] = useChainCalls(call ? [call] : [])
+  return result
 }
