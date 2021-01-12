@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
-import { ChainCall } from '../providers/chainState/callsReducer'
-import { ChainStateContext } from '../providers/chainState/context'
+import { ChainCall } from '../chainState/callsReducer'
+import { ChainStateContext } from '../chainState/context'
 
 export function useChainCalls(calls: ChainCall[]) {
   const { addCalls, removeCalls, value } = useContext(ChainStateContext)

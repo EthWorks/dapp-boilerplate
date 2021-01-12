@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { UnsupportedChainIdError } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { Colors, SUPPORTED_CHAINS } from '../../constants'
-import { useEthers } from '../../hooks'
+import { useEthers } from '../../dapp-framework'
 import { Account } from './Account'
 
 const injected = new InjectedConnector({ supportedChainIds: SUPPORTED_CHAINS })

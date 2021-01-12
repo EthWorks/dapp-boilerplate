@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, ReactNode } from 'react'
 import { BlockNumberContext } from './context'
 import { blockNumberReducer } from './reducer'
-import { useEthers, useDebounce } from '../../hooks'
+import { useEthers, useDebounce } from '../hooks'
 
 interface Props {
   children: ReactNode

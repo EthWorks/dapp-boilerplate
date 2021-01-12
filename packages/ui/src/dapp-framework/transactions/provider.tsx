@@ -1,5 +1,5 @@
 import React, { ReactNode, useCallback, useEffect, useReducer } from 'react'
-import { useEthers, useLocalStorage } from '../../hooks'
+import { useEthers, useLocalStorage } from '../hooks'
 import { useBlockNumber } from '../blockNumber/context'
 import { TransactionsContext } from './context'
 import { DEFAULT_STORED_TRANSACTIONS, StoredTransaction, TransactionToSave } from './model'

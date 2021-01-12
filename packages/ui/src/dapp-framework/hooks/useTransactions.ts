@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useTransactionsContext } from '../providers'
+import { useTransactionsContext } from '../transactions/context'
 import { useEthers } from './useEthers'
 
 export function useTransactions() {

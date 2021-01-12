@@ -1,4 +1,4 @@
-import { useEthers } from './useEthers'
+import { useEthers } from '../dapp-framework/hooks/useEthers'
 import { ChainId, Dai, KovanDai } from '../constants'
 import { useTokenBalance } from './useTokenBalance'
 
