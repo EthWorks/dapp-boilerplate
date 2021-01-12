@@ -1,5 +1,5 @@
 import React, { ReactNode, useCallback, useEffect, useReducer } from 'react'
-import { useDebounce, useEthers } from '../../hooks'
+import { useDebouncePair, useEthers } from '../../hooks'
 import { useBlockNumber } from '../blockNumber/context'
 import { ChainStateContext } from './context'
 import { chainStateReducer } from './chainStateReducer'
@@ -30,19 +30,30 @@ export function ChainStateProvider({ children }: Props) {
     [dispatchCalls]
   )
 
-  const debouncedCalls = useDebounce(calls, 100)
+  const [debouncedCalls, debouncedId] = useDebouncePair(calls, chainId, 50)
+  const uniqueCalls = debouncedId === chainId ? getUnique(debouncedCalls) : []
 
   useEffect(() => {
     if (library && blockNumber !== undefined && chainId !== undefined) {
-      multicall(library, chainId, blockNumber, debouncedCalls)
+      multicall(library, chainId, blockNumber, uniqueCalls)
         .then((state) => dispatchState({ type: 'FETCH_SUCCESS', blockNumber, chainId, state }))
         .catch((error) => {
           console.error(error)
           dispatchState({ type: 'FETCH_ERROR', blockNumber, chainId, error })
         })
     }
-  }, [library, debouncedCalls, blockNumber, chainId])
+  }, [library, blockNumber, chainId, JSON.stringify(uniqueCalls)])
 
   const value = chainId !== undefined ? state[chainId] : undefined
   return <ChainStateContext.Provider value={{ value, addCalls, removeCalls }} children={children} />
+}
+
+function getUnique(requests: ChainCall[]) {
+  const unique: ChainCall[] = []
+  for (const request of requests) {
+    if (!unique.find((x) => x.address === request.address && x.data === request.data)) {
+      unique.push(request)
+    }
+  }
+  return unique
 }

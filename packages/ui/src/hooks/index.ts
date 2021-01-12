@@ -1,6 +1,7 @@
 export * from './useTransactions'
 export * from './useDaiBalance'
 export * from './useDebounce'
+export * from './useDebouncePair'
 export * from './useEthBalance'
 export * from './useEthers'
 export * from './useNumberInput'
