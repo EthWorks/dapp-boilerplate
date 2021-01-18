@@ -1,4 +1,5 @@
-const infuraRpcUrl = (network: string) => `https://${network}.infura.io/v3/f2b66022539c4d5a9e6ac5b3dfaab15c`
+const infuraProjectId = process.env.INFURA_PROJECT_ID || ''
+const infuraRpcUrl = (network: string) => `https://${network}.infura.io/v3/${infuraProjectId}`
 
 export function useConfig() {
   return {
