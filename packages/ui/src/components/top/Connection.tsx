@@ -5,16 +5,21 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { Colors, SUPPORTED_CHAINS } from '../../constants'
 import { useEthers } from '../../hooks'
 import { Account } from './Account'
+import { useConfig } from '../../hooks/useConfig'
+import { NetworkConnector } from '../../infrastructure/connectors/NetworkConnector'
 
 const injected = new InjectedConnector({ supportedChainIds: SUPPORTED_CHAINS })
 
 export function Connection() {
   const { activate, account, error } = useEthers()
+  const config = useConfig()
 
   useEffect(() => {
     injected.isAuthorized().then((isAuthorized: boolean) => {
       if (isAuthorized) {
         activate(injected)
+      } else {
+        activate(new NetworkConnector(config.network))
       }
     })
   }, [])
