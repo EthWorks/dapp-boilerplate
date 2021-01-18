@@ -1,5 +1,5 @@
 {
-  "compilerVersion": "0.7.0",
+  "compilerVersion": "v0.8.0+commit.c7dfd78e",
   "outputType": "minimal",
   "compilerOptions": {
     "optimizer": {
