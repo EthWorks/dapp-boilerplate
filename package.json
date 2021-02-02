@@ -9,9 +9,9 @@
     "packages": ["packages/*"]
   },
   "scripts": {
-    "lint": "wsrun -c lint",
-    "build": "wsrun -e -c build",
-    "test": "wsrun -e -c test"
+    "lint": "wsrun -cs lint",
+    "build": "wsrun -et -c build",
+    "test": "wsrun -es -c test"
   },
   "dependencies": {
     "wsrun": "^5.2.1"
