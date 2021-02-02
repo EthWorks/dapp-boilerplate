@@ -1,5 +1,4 @@
-import { useEthers, useTokenBalance } from '@boilerplate/dapp-framework'
-import { ChainId, Dai, KovanDai } from '../constants'
+import { ChainId, Dai, KovanDai, useEthers, useTokenBalance } from '@boilerplate/dapp-framework'
 
 export function useDaiBalance() {
   const { chainId = ChainId.Mainnet } = useEthers()

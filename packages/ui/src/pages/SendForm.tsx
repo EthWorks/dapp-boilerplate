@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { getAddress } from '@ethersproject/address'
-import { Colors, Dai, Fonts } from '../constants'
+import { Colors, Fonts } from '../constants'
 import { useDaiBalance, useNumberInput } from '../hooks'
-import { CurrencyValue } from '../model'
 import { useSendDai } from './useSendDai'
+import { CurrencyValue, Dai } from '@boilerplate/dapp-framework'
 
 export function SendForm() {
   const [recipient, setRecipient] = useState('')
