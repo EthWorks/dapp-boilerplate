@@ -1,4 +1,12 @@
-import { ChainId, CurrencyValue, Dai, ERC20_ABI, KovanDai, useEthers, useTransactions } from '@boilerplate/dapp-framework'
+import {
+  ChainId,
+  CurrencyValue,
+  Dai,
+  ERC20_ABI,
+  KovanDai,
+  useEthers,
+  useTransactions,
+} from '@boilerplate/dapp-framework'
 import { shortenAddress } from '../utils'
 
 export function useSendDai(recipient: string, value: CurrencyValue) {
