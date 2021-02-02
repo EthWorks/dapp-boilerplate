@@ -1,7 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { MULTICALL_ABI, NATIVE_CURRENCY } from '../constants'
-// TODO(marik-d): Fix imports.
-import { ChainId, useChainCall, useEthers, useMulticallAddress } from '..'
+import { ChainId, MULTICALL_ABI, NATIVE_CURRENCY } from '../constants'
+import { useChainCall, useEthers, useMulticallAddress } from '../hooks'
 import { CurrencyValue } from '../model'
 
 export function useEthBalance() {
