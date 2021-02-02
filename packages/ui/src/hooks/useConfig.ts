@@ -1,4 +1,4 @@
-const infuraProjectId = process.env.INFURA_PROJECT_ID || ''
+const infuraProjectId = import.meta.env.SNOWPACK_PUBLIC_INFURA_PROJECT_ID || ''
 const infuraRpcUrl = (network: string) => `https://${network}.infura.io/v3/${infuraProjectId}`
 
 export function useConfig() {

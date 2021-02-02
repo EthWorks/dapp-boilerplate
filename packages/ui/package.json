@@ -14,8 +14,8 @@
     "lint:prettier": "yarn prettier './{src,test}/**/*.{ts,tsx,html}'",
     "clean": "rimraf ./build/",
     "test": "mocha",
-    "start": "webpack serve --mode development --progress",
-    "build": "webpack --mode production --progress"
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "dependencies": {
     "@boilerplate/dapp-framework": "^0.1.0",
@@ -32,18 +32,18 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@snowpack/plugin-typescript": "^1.2.1",
     "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^3.4.2",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
+    "@types/snowpack-env": "^2.3.3",
     "@web3-react/core": "^6.1.1",
     "@web3-react/injected-connector": "^6.0.7",
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "ethereum-waffle": "^3.2.0",
     "ethers": "^5.0.19",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^8.2.1",
@@ -51,12 +51,10 @@
     "prettier": "^2.1.2",
     "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2",
+    "snowpack": "^3.0.11",
+    "snowpack-plugin-replace": "^1.0.4",
     "solc": "^0.7.4",
-    "ts-loader": "^8.0.7",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.5",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "typescript": "^4.0.5"
   }
 }
