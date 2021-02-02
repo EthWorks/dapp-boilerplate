@@ -1,5 +1,5 @@
 import { TransactionReceipt } from '@ethersproject/providers'
-import { ChainId } from '../../constants'
+import { ChainId } from '../constants'
 
 export interface TransactionToSave {
   hash: string

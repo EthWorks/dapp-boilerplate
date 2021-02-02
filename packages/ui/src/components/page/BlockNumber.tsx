@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Colors, Fonts } from '../../constants'
-import { useBlockNumber, useChainState } from '../../dapp-framework'
+import { useBlockNumber, useChainState } from '@boilerplate/dapp-framework'
 
 export function BlockNumber() {
   const blockNumber = useBlockNumber()

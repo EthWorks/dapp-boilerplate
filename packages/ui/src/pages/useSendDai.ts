@@ -1,6 +1,6 @@
 import { Interface } from '@ethersproject/abi'
 import { Dai, ERC20_ABI, ChainId, KovanDai } from '../constants'
-import { useEthers, useTransactions } from '../dapp-framework'
+import { useEthers, useTransactions } from '@boilerplate/dapp-framework'
 import { CurrencyValue } from '../model'
 import { shortenAddress } from '../utils'
 

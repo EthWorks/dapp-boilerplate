@@ -1,3 +1,12 @@
+export enum ChainId {
+  Mainnet = 1,
+  Kovan = 42,
+  Ganache = 1337,
+}
+
+export const SUPPORTED_CHAINS = [ChainId.Mainnet, ChainId.Kovan, ChainId.Ganache]
+
+// TODO(marik-d): Clean this up.
 export const MAINNET_CHAIN_ID = 1
 export const ROPSTEN_CHAIN_ID = 3
 export const RINKEBY_CHAIN_ID = 4

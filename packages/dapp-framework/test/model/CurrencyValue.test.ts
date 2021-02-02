@@ -1,9 +1,7 @@
 import { expect } from 'chai'
 import { BigNumber } from '@ethersproject/bignumber'
 import { parseUnits } from '@ethersproject/units'
-import { CurrencyValue, formatCurrency } from '../../src/model/CurrencyValue'
-import { Currency } from '../../src/model/Currency'
-import { ChainId } from '../../src/constants'
+import { CurrencyValue, formatCurrency, Currency, ChainId } from '../../src'
 
 describe('CurrencyValue', () => {
   describe('fromString', () => {

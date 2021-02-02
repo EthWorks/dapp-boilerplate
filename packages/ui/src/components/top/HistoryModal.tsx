@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { ChainId, Colors } from '../../constants'
-import { useEthers, useTransactions, StoredTransaction } from '../../dapp-framework'
+import { useEthers, useTransactions, StoredTransaction } from '@boilerplate/dapp-framework'
 import { Modal } from '../Modal'
 import { Title } from '../page'
 import { Spinner } from './Spinner'

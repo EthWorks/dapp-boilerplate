@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { GANACHE_MULTICALL } from '../constants'
-import { DappProvider, GANACHE_CHAIN_ID } from '../dapp-framework'
+import { DappProvider, GANACHE_CHAIN_ID } from '@boilerplate/dapp-framework'
 import { GlobalStyle } from './GlobalStyle'
 
 interface Props {

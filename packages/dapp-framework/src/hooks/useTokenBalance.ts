@@ -1,6 +1,6 @@
 import { useEthers } from './useEthers'
-import { CurrencyValue, Token } from '../../model'
-import { ChainId } from '../../constants'
+import { CurrencyValue, Token } from '../model'
+import { ChainId } from '../constants'
 import { useChainCall } from './useChainCalls'
 import { Interface } from '@ethersproject/abi'
 import { BigNumber } from '@ethersproject/bignumber'
