@@ -6,6 +6,13 @@
   "scripts": {
     "build": "tsc"
   },
+  "dependencies": {
+    "@ethersproject/bignumber": "^5.0.7",
+    "@ethersproject/abi": "^5.0.7",
+    "@ethersproject/providers": "^5.0.7",
+    "@types/react": "^16.9.55",
+    "react": "^17.0.1"
+  },
   "devDependencies": {
     "typescript": "^4.1.3"
   }
