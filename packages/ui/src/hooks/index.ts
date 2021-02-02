@@ -1,4 +1,4 @@
 export * from './useDaiBalance'
-export * from './useEthBalance'
+export * from '../dapp-framework/hooks/useEthBalance'
 export * from './useNumberInput'
-export * from './useTokenBalance'
+export * from '../dapp-framework/hooks/useTokenBalance'

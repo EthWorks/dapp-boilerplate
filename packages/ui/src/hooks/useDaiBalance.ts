@@ -1,6 +1,6 @@
 import { useEthers } from '../dapp-framework/hooks/useEthers'
 import { ChainId, Dai, KovanDai } from '../constants'
-import { useTokenBalance } from './useTokenBalance'
+import { useTokenBalance } from '../dapp-framework/hooks/useTokenBalance'
 
 export function useDaiBalance() {
   const { chainId = ChainId.Mainnet } = useEthers()

@@ -1,8 +1,8 @@
 import { Interface } from '@ethersproject/abi'
 import { BigNumber } from '@ethersproject/bignumber'
-import { MULTICALL_ABI, NATIVE_CURRENCY } from '../constants'
-import { MAINNET_CHAIN_ID, useChainCall, useEthers, useMulticallAddress } from '../dapp-framework'
-import { CurrencyValue } from '../model'
+import { MULTICALL_ABI, NATIVE_CURRENCY } from '../../constants'
+import { MAINNET_CHAIN_ID, useChainCall, useEthers, useMulticallAddress } from '..'
+import { CurrencyValue } from '../../model'
 
 const multicallInterface = new Interface(MULTICALL_ABI)
 
