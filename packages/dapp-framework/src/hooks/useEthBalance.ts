@@ -1,11 +1,8 @@
-import { Interface } from '@ethersproject/abi'
 import { BigNumber } from '@ethersproject/bignumber'
 import { MULTICALL_ABI, NATIVE_CURRENCY } from '../constants'
 // TODO(marik-d): Fix imports.
 import { ChainId, useChainCall, useEthers, useMulticallAddress } from '..'
 import { CurrencyValue } from '../model'
-
-const multicallInterface = new Interface(MULTICALL_ABI)
 
 export function useEthBalance() {
   const { chainId = ChainId.Mainnet, account } = useEthers()
@@ -14,7 +11,7 @@ export function useEthBalance() {
   const data = useChainCall(
     !!account && {
       address: multiCallAddress,
-      data: multicallInterface.encodeFunctionData('getEthBalance', [account]),
+      data: MULTICALL_ABI.encodeFunctionData('getEthBalance', [account]),
     }
   )
 
